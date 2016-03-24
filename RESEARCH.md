@@ -31,3 +31,43 @@ usage: screencapture [-icMPmwsWxSCUtoa] [files]
   -B<bundleid> screen capture output will open in app with bundleidBS
   files   where to save the screen capture, 1 file per screen
 ```
+
+### Module JPM
+https://github.com/bit/subprocess
+
+`subprocess.jsm` - start a process in your Firefox Extension and read/write data to/from it using stdin/stdout/stderr streams.
+
+
+### JS resources
+
+##### Save image from clipboard
+```js
+var image = "data:image/png;base64,...";
+
+var io         = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+var channel    = io.newChannel(image, null, null);
+var input      = channel.open();
+var imgTools   = Components.classes["@mozilla.org/image/tools;1"].getService(Components.interfaces.imgITools);
+
+var container  = {};
+imgTools.decodeImageData(input, channel.contentType, container);
+
+var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
+trans.addDataFlavor("image/png");
+trans.setTransferData("image/png", container.value, -1);
+
+var clipid = Components.interfaces.nsIClipboard;
+var clip   = Components.classes["@mozilla.org/widget/clipboard;1"].getService(clipid);
+clip.setData(trans, null, clipid.kGlobalClipboard);
+```
+
+
+### MDN resources
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Using_the_clipboard
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboard
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboardHelper
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile

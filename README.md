@@ -1,4 +1,4 @@
-![awesomescreenshot-logo](https://raw.github.com/ajsb85/instantbird-addon-awesomescreenshot/master/press/logo/awesomescreenshot.jpeg "awesomescreenshot")
+![awesomescreenshot-logo](https://raw.github.com/ajsb85/instantbird-addon-awesomescreenshot/master/press/logo/icon48.png "awesomescreenshot")
 
 ### Awesome Screenshot: Screen capture, Annotate
 The easiest way to communicate with images.

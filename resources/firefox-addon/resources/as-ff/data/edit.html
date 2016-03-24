@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+				<link rel="shortcut icon" href="img/icon19.png" />
+        <title>Annotate Your Screenshot</title>
+        <link href="css/main.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.helper.js"></script>
+				<script type="text/javascript" src="js/detect.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/draggable.js"></script>
+        <script type="text/javascript" src="js/resizable.js"></script>
+        <script type="text/javascript" src="js/autogrowinput.js"></script>
+        <script type="text/javascript" src="js/jqModal.js"></script>
+				<script type="text/javascript" src="js/jquery.md5.js"></script>
+        <script type="text/javascript" src="js/md5.js"></script>
+				<script type="text/javascript" src="js/edit.js"></script>
+    </head>
+    <body class="edit_page">
+        <script type="text/javascript" src="js/cga.js"></script><!--recommended to insert here-->
+        <div id="tool-panel">
+            <a id="logo" href="http://awesomescreenshot.com/" target="_blank">Awesome Screenshot</a>
+            <div id="annotation_bar">
+                <a href="javascript:void(0)" id="crop" class="title" title="Crop a portion of the screenshot"><span></span>
+                </a><a href="javascript:void(0)" id="rectangle" class="title" title="Rectangle"><span></span>
+                </a><a href="javascript:void(0)" id="ellipse" class="title" title="Ellipse"><span></span>
+                </a><a href="javascript:void(0)" id="arrow" class="title" title="Arrow"><span></span>
+                </a><a href="javascript:void(0)" id="line" class="title" title="Line"><span></span>
+                </a><a href="javascript:void(0)" id="free-line" class="title" title="Free Line"><span></span>
+                </a><a href="javascript:void(0)" id="blur" class="title" title="Blur"><span></span>
+                </a><a href="javascript:void(0)" id="text" class="title" title="Text"><span></span>
+                </a><a href="javascript:void(0)" id="color" class="title" title="Choose Color"><span></span><ul>
+                        <li style="background-color:#000000"></li>
+                        <li style="background-color:#808080"></li>
+                        <li style="background-color:#FF0000"></li>
+                        <li style="background-color:#FF9900"></li>
+                        <li style="background-color:#FFFF00"></li>
+                        <li style="background-color:#00FF00"></li>
+                        <li style="background-color:#FFFFFF"></li>
+                        <li style="background-color:#C0C0C0"></li>
+                        <li style="background-color:#00FFFF"></li>
+                        <li style="background-color:#0000FF"></li>
+                        <li style="background-color:#9900FF"></li>
+                        <li style="background-color:#FF00FF"></li>
+                    </ul></a><a href="javascript:void(0)" id="undo" class="title"><span></span>
+                </a><a href="javascript:void(0)" id="save" class="title"><b></b>Done
+                </a><a href="javascript:void(0)" id="done" class="title"><b></b>Crop
+                </a><a href="javascript:void(0)" id="cancel" class="title"><b></b>Cancel
+                </a>
+            </div>
+            <ul id="feedback">
+                <li id="domeafavor"></li>
+                <li id="tweet"><a href="http://twitter.com/share?url=http%3A%2F%2Fbit.ly%2FgBsZtO&amp;via=diigo&amp;text=Check out this Firefox add-on &quot;Awesome Screenshot&quot;, Easily capture and annotate screenshot.&amp;related=diigo" target="_blank"></a></li>
+                <li id="rating"><a href="https://addons.mozilla.org/en-US/firefox/addon/awesome-screenshot-capture-/reviews/add" target="_blank"></a></li>
+                <li id="cemail"><a href="mailto:screenshot@diigo.com?subject=Awesome Screenshot (Firefox) Feedback"></a></li>
+								<li id="contribute"><a href="https://addons.mozilla.org/en-US/firefox/addon/awesome-screenshot-capture-/developers" target="_blank"></a></li>
+            </ul>
+            <div id="tip"><span></span></div>
+            <a href="javascript:void(0)" id="exit" title="Exit Awesome Screenshot"><span></span></a>
+        </div>
+        <div id="edit-area">
+            <div id="saveWrapper">
+						
+							<div id="saveImageOuter">
+								<div id="save_image_wrapper">
+									<div>
+										<span id="image_loader" class="i18n"></span>
+										<img id="save-image" alt="save image" />
+									</div>	
+									<div>
+										<a id="re-edit" href="javascript:void(0)"></a>
+									</div>
+								</div>
+							</div>
+
+							<div id="saveTipOuter">
+								<div id="save-tip">
+										<div id="saveOptionHead">
+											<span class="title">Save Online</span>
+											<span class="back">&laquo; Back</span>
+										</div>
+										<div id="saveOptionBody" class="clear">
+											<ul id="saveOptionList">
+												<!-- <li class="diigo">Diigo</li>
+												<li class="as">Awesome Screenshot</li>
+												<li class="local">Local</li> -->
+												<li class="as">Temporarily</li>
+												<li class="diigo">Permanently, on Diigo.com</li>
+												<li class="local">Local</li>
+											</ul>
+											<ul id="saveOptionContent">
+												<li class="diigo clear">
+													<ul class="saveForm">
+														<li><input type="text" name="title" placeholder="Title" /></li>
+														<li><input type="text" name="tags" placeholder="Tags (Comma seperated)" /></li>
+														<li class="clear">
+															<span>
+																<input type="checkbox" name="privacy" id="privacy" />
+																<label for="privacy">Private</label>
+															</span>
+															<span class="button save">Save</span>
+														</li>
+													</ul>
+													<div id="account"><table><tbody><tr><td><div class="loginByGoogle"><strong>New to Diigo? Connect to diigo.com via</strong><a href="http://www.diigo.com/account/thirdparty/openid?openid_url=https://www.google.com/accounts/o8/id&redirect_url=http://www.diigo.com/account/ffe_login_suc&request_from=firefox_awesome_screenshot" class="button" target="_blank">Google account</a></div></td></tr><tr><td><div class="loginByDiigo"><ul><li><strong>Already have an Diigo account?</strong></li><li><input type="text" name="username" placeholder="Username/Email" required=""><input type="password" name="password" placeholder="Password" required=""></li><li><span class="button">Sign In</span></li></ul></div></td></tr></tbody></table></div>
+													<div id="accountInfo">
+														<a class="name" title="Your img on diigo.com" target="_blank" href="#"></a>
+														<a class="signout" href="#" onclick="SavePage.signout()">Sign Out</a>
+													</div>
+													<div class="premium">
+														You have exceeded free image storage capacity, you can go premium.
+														<a href="http://www.diigo.com/premium" target="_blank">Learn more &raquo;</a>
+														
+													</div>
+												</li>
+												<li class="as clear">
+													<div class="saveForm">
+														<div>Your screenshot will be saved on Awesomescreenshot.com, which will be automatically removed after about 1 month</div>
+														<span class="button save">Save</span>
+													</div>	
+												</li>
+												<li class="local clear">
+													<div>Right click on image to save it as a file.</div>
+													<span style="display:none" class="button save">Save</span>
+												</li>
+											</ul>
+										</div>
+										
+										<div id="saveOnline">
+											<h3>
+												<span id="selectedHost" class="title">Save Online</span>
+												<span id="selectionListButton">&nu;</span>
+												<span id="accountInfo"></span>
+												<ul id="selectionList">
+													<li class="diigo">Diigo</li>
+													<li class="as">Awesome Screenshot</li>
+												</ul>
+											</h3>
+											<div class="content">
+												<div class="diigo">
+													<ul>
+														<li><input type="text" name="title" placeholder="Title" /></li>
+														<li><input type="text" name="tags" placeholder="Tags (Comma seperated)" /></li>
+														<li class="clear">
+															<span>
+																<input type="checkbox" name="privacy" id="privacy" checked="checked" />
+																<label for="privacy">Private</label>
+															</span>
+															<span class="button save">Save</span>
+														</li>
+													</ul>
+												</div>
+												<div class="as clear">
+													<span>Upload to 
+														<a style="color:#eee" href="http://www.awesomescreenshot.com" target="_blank">awesomescreenshot.com</a>
+													</span>
+													<span class="button save" style="margin-top:10px">Upload</span>
+												</div>
+												<!-- tag input, login -->
+											</div>
+										</div>
+										
+										<div id="legacySave">
+												<h2 id="save_congrats" class="i18n">Congrats! Here is your screenshot.</h2>
+												<h3 id="save_howto" class="i18n">How to use it?</h3>
+												<dl>
+														<dt id="save_local" class="i18n">Option 1: Save image as a file</dt>
+														<dd><a href="javascript:void(0)" id="save_button"><span></span>Save</a></dd>
+														<dt id="share" class="i18n">Option 2: Share</dt>
+														<dd></dd>
+												</dl>
+										</div>
+										
+										<div id="saveLocal" class="section">
+											<h3><span class="title">Save Local</span></h3>
+											<div class="content clear">
+												<span style="line-height:20px">Save image as a file<!-- Right click on top of the image and choose "Save Image As..." --></span>
+												<span class="button save">Save</span>
+											</div>
+										</div>
+										
+										
+								</div>
+							</div>
+						</div>
+
+            <canvas id="show-canvas" width="0" height="0"></canvas>
+            <canvas id="draw-canvas" width="0" height="0"></canvas>
+
+            <div id="helper">
+                <span id="crop-tip"></span>
+                <div id="top"></div>
+                <div id="right"></div>
+                <div id="bottom"></div>
+                <div id="left"></div>
+                <div id="center">
+                    <span id="crop_size"></span>
+                </div>
+            </div>
+        </div>
+				
+				<div id="messageChannel" style="display:none"></div>
+				
+				<div id="networkError" class="jqmWindow" style="display:none;">
+					<a href="#" class="jqmClose btnDark" style="text-decoration:none; margin-top:30px;">Close</a>
+					<div>Network error.</div>
+				</div>
+				<div id="authError" class="jqmWindow" style="display:none;">
+					You're not log in. Please 
+					<a href="#" class="jqmClose btnDark" onclick="$('#saveOptionContent>.diigo').removeClass('signin');" style="text-decoration:none; margin-left:10px; float:none; display: inline-block;">Sign In</a>
+				</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+
+        body{
+            color: #000;
+            font: 12px/20px Helvetica,arial,sans-serif;
+            padding: 3px 0;
+            margin: 0;
+        }
+
+        ul{
+
+        }
+
+        li{
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+            padding: 3px;
+            color: #303030;
+        }
+
+        li span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+
+        li cite{
+            float: right;
+            font-size: 11px;
+            color:rgba(0,0,0,.6);
+            font-style: normal;
+
+        }
+
+        li:hover{
+            background: #eceff5;
+            color: #000;
+        }
+
+        #visible span{
+            background: url(./img/visible.png) no-repeat center ;
+        }
+
+        #fullpage span{
+            background: url(./img/entire.png) center no-repeat;
+        }
+
+        #opitons span{
+            background: url(./img/icons.png) no-repeat -280px -40px ;
+        }
+
+        #moreLinks{
+            margin-top: 8px;
+            border-top: 1px solid #aaa;
+            padding-top: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="visible"><span></span>Capture Visible Part of page<cite>Ctrl+Shift+I</cite></li>
+        <li id="fullpage"><span></span>Capture entire page<cite>Ctrl+Shift+E</cite></li>
+    </ul>
+    <ul id="moreLinks">
+        <li id="opitons"><span></span>Options</li>
+    </ul>
+
+
+<script>
+    document.getElementById('visible').addEventListener('click',function(){
+        addon.port.emit('capture','visible');
+    },false);
+    document.getElementById('fullpage').addEventListener('click',function(){
+        addon.port.emit('capture','entire');
+    },false);
+    document.getElementById('opitons').addEventListener('click',function(){
+        addon.port.emit('capture','options');
+    },false);
+
+</script>
+
+</body>
+</html>

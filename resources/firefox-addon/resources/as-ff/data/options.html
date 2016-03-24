@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="options_page">
+	<head>
+		<title>Options</title>
+		<link href="css/options.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/detect.js"></script>
+		<script type="text/javascript" src="js/options.js"></script>
+	</head>
+	<body class="options_page">
+		<script type="text/javascript" src="js/cga.js"></script>
+		<div id="wrapper">
+			<div id="header"><h1>Awesome Screenshot Options</h1></div>
+			<div id="options">
+				<fieldset id="format">
+					<legend>Image Format</legend>
+					<input type="radio" name="format" value="PNG" id="png"  checked="checked" />
+					<label for="png">PNG</label>
+					<input type="radio" name="format" value="JPG" id="jpeg" />
+					<label for="jpeg">JPG</label>
+				</fieldset>
+				<fieldset>
+					<legend>Shortcuts Setting</legend>
+					<input type="checkbox" name="shortcutEnable" id="shortcurEnable" checked="checked" />
+					<label for="shortcurEnable">Enable</label>
+
+
+					<!--<table id="shortcuts_table">-->
+						<!--<tbody id="menu_shortcuts">-->
+						<!--<tr>-->
+							<!--<td><input type="checkbox" name="visible" id="visible" /><label for="visible">Capture Visible</label></td>-->
+							<!--<td class="select"></td>-->
+						<!--</tr>-->
+						<!--&lt;!&ndash; <tr>-->
+							<!--<td><input type="checkbox" name="selected" id="selected" /><label for="selected">Capture Selected Area</label></td>-->
+							<!--<td class="select"></td>-->
+						<!--</tr> &ndash;&gt;-->
+						<!--<tr>-->
+							<!--<td><input type="checkbox" name="entire" id="entire" /><label for="entire">Capture Full</label></td>-->
+							<!--<td class="select"></td>-->
+						<!--</tr>-->
+						<!--</tbody>-->
+					<!--</table>-->
+				</fieldset>
+
+				<div id="tip">
+					<span></span>
+				</div>
+			</div>
+			<div id="action_panel">
+				<input type="button" value="Reset" />
+				<input type="button" value="Save" />
+				<input type="button" value="Close" />
+			</div>
+		</div>
+		<!-- <div id="ext4u_promote"><iframe src="http://ext4u.com/show/screenshot" frameborder="0" height="120" width="940"></iframe></div> -->
+		
+		<div id="messageChannel" style="display:none"></div>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+{
+ "abort_on_missing": false, 
+ "check_memory": false, 
+ "enable_e10s": false, 
+ "is-sdk-bundled": false, 
+ "jetpackID": "jid0-GXjLLfbCoAx0LcltEdFrEkQdQPI@jetpack", 
+ "loader": "addon-sdk/lib/sdk/loader/cuddlefish.js", 
+ "main": "main", 
+ "mainPath": "as-ff/main", 
+ "manifest": {
+  "as-ff/ff-dcm-client": {
+   "docsSHA256": null, 
+   "jsSHA256": "94f4d1572be7b25346f9f593fdaff767b3c4f9da85c306f012bf41ded26d20fc", 
+   "moduleName": "ff-dcm-client", 
+   "packageName": "as-ff", 
+   "requirements": {
+    "chrome": "chrome"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "as-ff/ff-dcm-startup": {
+   "docsSHA256": null, 
+   "jsSHA256": "0f960a50adb140631125b9bc85e20dbf32c828f505b21b53201f736bdb3d7b98", 
+   "moduleName": "ff-dcm-startup", 
+   "packageName": "as-ff", 
+   "requirements": {
+    "chrome": "chrome"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "as-ff/main": {
+   "docsSHA256": "623b903f6b24b90a661dc3ee61b4e3ee6ad12c76da1e420b4867747dad7baf2b", 
+   "jsSHA256": "e5a659418b1fbaba1c4f1020e515e9ba9ae4c5a287878d22626d634ffeb52ef2", 
+   "moduleName": "main", 
+   "packageName": "as-ff", 
+   "requirements": {
+    "chrome": "chrome", 
+    "ff-dcm-client": "as-ff/ff-dcm-client", 
+    "ff-dcm-startup": "as-ff/ff-dcm-startup", 
+    "md5": "as-ff/md5", 
+    "sdk/notifications": "sdk/notifications", 
+    "sdk/page-mod": "sdk/page-mod", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/tabs": "sdk/tabs", 
+    "ui": "as-ff/ui", 
+    "upload": "as-ff/upload"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "as-ff/md5": {
+   "docsSHA256": null, 
+   "jsSHA256": "2ea8259c50ebec3217d510638c1b5dc49f0a9f13a67a8af7a54700e4aed9d2c6", 
+   "moduleName": "md5", 
+   "packageName": "as-ff", 
+   "requirements": {}, 
+   "sectionName": "lib"
+  }, 
+  "as-ff/ui": {
+   "docsSHA256": null, 
+   "jsSHA256": "8304cc548b2a3e562b17c51bbfa1b0b5377aea155c446fc65332ae465dc7fa60", 
+   "moduleName": "ui", 
+   "packageName": "as-ff", 
+   "requirements": {
+    "chrome": "chrome", 
+    "sdk/context-menu": "sdk/context-menu", 
+    "sdk/hotkeys": "sdk/hotkeys", 
+    "sdk/panel": "sdk/panel", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/system/xul-app": "sdk/system/xul-app", 
+    "sdk/tabs": "sdk/tabs", 
+    "sdk/ui": "sdk/ui", 
+    "sdk/ui/button/toggle": "sdk/ui/button/toggle", 
+    "sdk/windows": "sdk/windows"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "as-ff/upload": {
+   "docsSHA256": null, 
+   "jsSHA256": "7f7e3798e7c65afcff1319d1e4ca18b6a211c5756e86356e53a74e73784b8dfa", 
+   "moduleName": "upload", 
+   "packageName": "as-ff", 
+   "requirements": {
+    "sdk/request": "sdk/request"
+   }, 
+   "sectionName": "lib"
+  }
+ }, 
+ "metadata": {
+  "addon-sdk": {
+   "description": "Add-on development made easy.", 
+   "keywords": [
+    "javascript", 
+    "engine", 
+    "addon", 
+    "extension", 
+    "xulrunner", 
+    "firefox", 
+    "browser"
+   ], 
+   "license": "MPL 2.0", 
+   "name": "addon-sdk"
+  }, 
+  "as-ff": {
+   "author": "Diigo Team", 
+   "description": "Capture the whole page or any portion, annotate it with rectangles, circles, arrows, lines and text, blur sensitive info, one-click upload to share.", 
+   "main": "main", 
+   "name": "as-ff", 
+   "version": "2.4.11"
+  }
+ }, 
+ "name": "as-ff", 
+ "parseable": false, 
+ "preferencesBranch": "jid0-GXjLLfbCoAx0LcltEdFrEkQdQPI@jetpack", 
+ "sdkVersion": "1.17", 
+ "staticArgs": {}, 
+ "verbose": false
+}

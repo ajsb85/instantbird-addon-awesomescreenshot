@@ -1,6 +1,6 @@
 ![awesomescreenshot-logo](https://raw.github.com/ajsb85/instantbird-addon-awesomescreenshot/master/press/logo/awesomescreenshot.jpeg "awesomescreenshot")
 
-### Awesome Screenshot
+### Awesome Screenshot: Screen capture, Annotate
 The easiest way to communicate with images.
 Capture the whole page or any portion, annotate it with rectangles, circles, arrows, lines and text, blur sensitive info, one-click upload to share. And more!
 
@@ -31,6 +31,13 @@ Check out our the new Awesome Screenshot website @ www.awesomescreenshot.com to 
 4. Save very large images, bypass the 2M limit. No more crashes
 5. Interact with point-specific comments between friends and colleagues thru the new awesomescreenshot.com
 
+##### Awesome Screenshot Preferences
+* Image format: PNG or JPG
+* Shortcuts Setting
+* Delay Seconds
+* Default Local Path
+* Autosave - If you prefer to save your screenshots unaltered, simply choose this option. Each screenshot will be saved directly to the default folder, with the title of the captured web page as its file name.
+
 ##### Updated privacy policy
 Usage of the Awesome Screenshot browser extension requires granting it permission to capture anonymized click stream data. Please review our specific EULA  https://www.diigo.com/extensions_terms.html and privacy policy  https://www.diigo.com/extensions_privacy.html  for more details. You can disable it in the option page if you prefer not to share the data.
 
@@ -52,7 +59,6 @@ https://addons.instantbird.org/addon/ToDo/
 Give us a hand! Send an email to a.salas@ieee.org if you'd like to help translate the extension to your language.
 
 ## Bug Report and Suggestions
-
 We appreciate and receive many user suggestions and requests for improvements. If you have features you would like to see added, or experience a bug for reporting, please send us e-mail at a.salas@ieee.org. Doing so will allow us to consider any improvements and correct any bugs as soon as possible. Thank you!
 
 Also you can contribute filing a bug at https://github.com/ajsb85/instantbird-addon-awesomescreenshot/issues
